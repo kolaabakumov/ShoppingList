@@ -1,6 +1,5 @@
 package com.abakumov.shoppinglist.presentation
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.abakumov.shoppinglist.data.ShopListRepositoryImpl
 import com.abakumov.shoppinglist.domain.DeleteShopItemUseCase
@@ -18,7 +17,7 @@ class MainViewModel : ViewModel() {
 
     val shopList = getShopItemListUseCase.getShopItemList()
 
-    fun deleteShopItemList(shopItem: ShopItem) {
+    fun deleteShopItem(shopItem: ShopItem) {
         deleteShopItemUseCase.deleteShopItem(shopItem)
     }
 
